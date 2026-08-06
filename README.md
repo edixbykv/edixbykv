@@ -1,160 +1,179 @@
-# Kuldeep Vishwakarma
-
-Software Engineer — AI Systems, Computer Vision, Enterprise Desktop Applications
-
-[edixbykv@gmail.com](mailto:edixbykv@gmail.com) · [GitHub](https://github.com/edixbykv)
-
----
-
-## 01 Tech Stack
-
-| Category | Stack |
-|---|---|
-| Languages | ![Python](https://img.shields.io/badge/Python-555?style=flat-square&logo=python&logoColor=white) ![C#](https://img.shields.io/badge/C%23-555?style=flat-square&logo=csharp&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-555?style=flat-square&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-555?style=flat-square&logo=javascript&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-555?style=flat-square) |
-| Desktop | ![.NET](https://img.shields.io/badge/.NET-555?style=flat-square&logo=dotnet&logoColor=white) ![WPF](https://img.shields.io/badge/WPF-555?style=flat-square) ![WinUI](https://img.shields.io/badge/WinUI-555?style=flat-square) |
-| Backend | ![FastAPI](https://img.shields.io/badge/FastAPI-555?style=flat-square&logo=fastapi&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-555?style=flat-square&logo=nodedotjs&logoColor=white) ![Express](https://img.shields.io/badge/Express-555?style=flat-square&logo=express&logoColor=white) |
-| Frontend | ![Next.js](https://img.shields.io/badge/Next.js-555?style=flat-square&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-555?style=flat-square&logo=react&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind-555?style=flat-square&logo=tailwindcss&logoColor=white) ![Three.js](https://img.shields.io/badge/Three.js-555?style=flat-square&logo=threedotjs&logoColor=white) |
-| Database | ![SQLite](https://img.shields.io/badge/SQLite-555?style=flat-square&logo=sqlite&logoColor=white) ![SQL Server](https://img.shields.io/badge/SQL_Server-555?style=flat-square&logo=microsoftsqlserver&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-555?style=flat-square&logo=postgresql&logoColor=white) |
-| AI / ML | ![PyTorch](https://img.shields.io/badge/PyTorch-555?style=flat-square&logo=pytorch&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-555?style=flat-square&logo=tensorflow&logoColor=white) ![OpenCV](https://img.shields.io/badge/OpenCV-555?style=flat-square&logo=opencv&logoColor=white) ![MediaPipe](https://img.shields.io/badge/MediaPipe-555?style=flat-square&logo=mediapipe&logoColor=white) ![YOLO](https://img.shields.io/badge/YOLO-555?style=flat-square) ![CNN](https://img.shields.io/badge/CNN-555?style=flat-square) ![Vision Transformer](https://img.shields.io/badge/Vision_Transformer-555?style=flat-square) ![Scikit-learn](https://img.shields.io/badge/Scikit_learn-555?style=flat-square&logo=scikitlearn&logoColor=white) |
-| Tools | ![Git](https://img.shields.io/badge/Git-555?style=flat-square&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-555?style=flat-square&logo=github&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-555?style=flat-square&logo=docker&logoColor=white) ![VS Code](https://img.shields.io/badge/VS_Code-555?style=flat-square&logo=visualstudiocode&logoColor=white) ![Visual Studio](https://img.shields.io/badge/Visual_Studio-555?style=flat-square&logo=visualstudio&logoColor=white) |
-
----
-
-## 02 Engineering Expertise
-
-| | |
-|---|---|
-| Windows Desktop Software | REST APIs |
-| Enterprise Software | Performance Optimization |
-| AI Applications | Multithreading |
-| Computer Vision | Memory Management |
-| Machine Learning | Database Design |
-| Secure Data Erasure | System Programming |
-| Automation | |
-
----
-
-## 03 Featured Projects
-
-### Data Sanitization Suite
-
-**Overview**
-Enterprise-grade secure data erasure application for Windows, built to permanently destroy data on storage drives in compliance with recognized data-destruction standards, with audit-ready reporting.
-
-**Architecture**
-Desktop application (WPF, MVVM) with direct disk I/O via Win32 and low-level drive APIs, backed by a local SQLite store for job history, logs, and generated reports.
-
-**Tech Stack**
-`C#` `.NET` `WPF` `SQLite` `Win32 API` `Disk APIs`
-
-**Algorithms**
-- DoD 5220.22-M
-- NIST 800-88
-- Random pass overwrite
-- Zero-fill
-- Cryptographic erase
-- Post-wipe verification (SHA-256, CRC)
-
-**Performance Notes**
-Sequential, buffered I/O and asynchronous drive operations to reduce wipe time on large-capacity and multi-drive jobs; verification is scoped to avoid unnecessary full-drive re-reads where cryptographic erase already guarantees destruction.
-
-**Key Features**
-- Multi-drive batch wiping
-- Scheduled wipe jobs
-- Detailed logs and exportable reports
-- Cryptographically verified erasure
-
-**Challenges Solved**
-Producing verifiable, standards-compliant erasure across drive types (HDD, SSD, NVMe) with different low-level behaviors, while keeping audit reports accurate enough for compliance review.
-
----
-
-### Deepfake Detection
-
-**Overview**
-AI-based image authenticity verification system that analyzes visual and statistical signals to flag synthetic or manipulated media.
-
-**Architecture**
-Python inference service (FastAPI) exposing a detection API, backed by trained CNN and Vision Transformer models, with a React frontend for uploading media and reviewing results.
-
-**Tech Stack**
-`Python` `OpenCV` `PyTorch` `FastAPI` `React`
-
-**Algorithms**
-- Convolutional Neural Networks (CNN)
-- Vision Transformer (ViT)
-- Face detection and alignment
-- Frequency-domain analysis
-- Noise-pattern analysis
-- Feature extraction and confidence scoring
-
-**Performance Notes**
-Combines spatial (CNN/ViT) and frequency-domain features so detection is less dependent on any single artifact, improving robustness against compression and re-encoding.
-
-**Key Features**
-- Authenticity confidence score
-- Manipulation heatmaps
-- Batch image analysis
-- REST API for integration into other systems
-
-**Challenges Solved**
-Maintaining detection accuracy on heavily compressed or re-encoded media, where standard artifacts can mask or mimic manipulation signatures.
-
----
-
-### Furniture Manufacturing ERP
-
-**Overview**
-Workflow management system for manufacturing operations, covering production tracking, inventory, and reporting in a single platform.
-
-**Architecture**
-Full-stack web application with a Next.js/React frontend and a Node.js backend, backed by a relational (SQL) database for production and inventory records.
-
-**Tech Stack**
-`Next.js` `React` `Node.js` `SQL`
-
-**Key Features**
-- Production tracking dashboard
-- Inventory management
-- Order and analytics reporting
-
-**Challenges Solved**
-Modeling production and inventory state so it stays consistent under concurrent updates from multiple stations and users.
-
----
-
-## 04 GitHub Statistics
-
 <p align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=edixbykv&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="48%" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=edixbykv&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" width="38%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,18,24&height=200&section=header&text=Welcome%20To%20My%20GitHub%20Space&fontSize=38&fontColor=ffffff&animation=fadeIn" width="100%" />
 </p>
 
 <p align="center">
-<img src="https://streak-stats.demolab.com/?user=edixbykv&theme=tokyonight&hide_border=true" width="90%" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&width=700&lines=Software+Engineer+%E2%80%94+AI+Systems+%26+Computer+Vision;Enterprise+Desktop+Applications+(.NET+%2F+C%23+%2F+WPF);Full-Stack+Web+Developer+(Next.js+%2F+React+%2F+FastAPI)" alt="Typing SVG" />
 </p>
 
 <p align="center">
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=edixbykv&theme=tokyo-night&hide_border=true" width="95%" />
+  <a href="mailto:edixbykv@gmail.com">
+    <img src="https://img.shields.io/badge/Email-edixbykv%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://github.com/edixbykv">
+    <img src="https://img.shields.io/badge/GitHub-edixbykv-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <img src="https://komarev.com/ghpvc/?username=edixbykv&color=ff69b4&style=for-the-badge&label=PROFILE+VIEWS" />
 </p>
 
 ---
 
-## 05 Repository Highlights
+## ⚡ About Me
 
-| Repository | Description | Stack |
-|---|---|---|
-| Data Sanitization Suite | Secure, standards-compliant data erasure for Windows | C#, .NET, WPF |
-| Deepfake Detection | AI-based image authenticity and manipulation detection | Python, PyTorch, FastAPI |
-| Furniture Manufacturing ERP | Production, inventory, and reporting platform | Next.js, Node.js, SQL |
+```yaml
+Role: Software Engineer — AI Systems & Enterprise Software
+Focus: Computer Vision, Deep Learning, High-Performance Desktop & Web Systems
+Location: Global / Remote
+Core Values: Code Predictability, Standards-Compliant Security, High Performance
+```
 
-[View all repositories →](https://github.com/edixbykv?tab=repositories)
+- 🔭 **Currently building**: Next-gen AI vision pipeline & enterprise desktop applications.
+- 🎯 **Specialized in**: Low-level disk I/O, secure data destruction, deepfake authenticity verification, and production ERP architectures.
+- ⚡ **Technical Strengths**: Multi-threading, memory management, REST APIs, and robust software architecture.
 
 ---
 
-## 06 Development Philosophy
+## 🛠️ Tech Stack & Technologies
 
-Software should be predictable, verifiable, and easy to reason about.
-Correctness and performance take priority over convenience, especially in systems handling security or user data.
-Most of the engineering effort goes into testing edge cases, not writing the first version.
-Simple, well-tested code beats clever code.
+### 💻 Programming Languages
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" />
+</p>
+
+### 🖥️ Desktop Development
+<p>
+  <img src="https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" />
+  <img src="https://img.shields.io/badge/WPF-512BD4?style=for-the-badge&logo=windows&logoColor=white" />
+  <img src="https://img.shields.io/badge/WinUI_3-0078D6?style=for-the-badge&logo=windows11&logoColor=white" />
+  <img src="https://img.shields.io/badge/Win32_API-0078D4?style=for-the-badge&logo=windows&logoColor=white" />
+</p>
+
+### ⚙️ Backend & API Development
+<p>
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/REST_APIs-0055DA?style=for-the-badge&logo=postman&logoColor=white" />
+</p>
+
+### 🎨 Frontend & Web Technologies
+<p>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+</p>
+
+### 🗄️ Databases & Data Storage
+<p>
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQL_Server-CC292B?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" />
+</p>
+
+### 🧠 AI, Machine Learning & Computer Vision
+<p>
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
+  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
+  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" />
+  <img src="https://img.shields.io/badge/MediaPipe-0097A7?style=for-the-badge&logo=google&logoColor=white" />
+  <img src="https://img.shields.io/badge/YOLO-00FFFF?style=for-the-badge&logo=ultralytics&logoColor=black" />
+  <img src="https://img.shields.io/badge/Vision_Transformer-FF6F00?style=for-the-badge&logo=huggingface&logoColor=white" />
+  <img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" />
+</p>
+
+### 🛠️ Developer Tools & DevOps
+<p>
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" />
+  <img src="https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visualstudio&logoColor=white" />
+</p>
+
+---
+
+## 🏛️ Engineering & Core Competencies
+
+| Domain | Systems & Architecture | Core Capabilities |
+| :--- | :--- | :--- |
+| **Windows Systems** | WPF, WinUI, Win32 & Disk APIs | High-speed low-level I/O, Async Batch Wiping |
+| **Artificial Intelligence** | PyTorch, OpenCV, ViT, CNNs | Spatial/Frequency analysis, Heatmap Generation |
+| **Backend & Databases** | FastAPI, Node.js, PostgreSQL, SQLite | Scalable REST APIs, Concurrency control, Query optimization |
+| **Frontend & Web** | Next.js, React, Tailwind CSS | Dynamic interactive UIs, Real-time dashboards |
+
+---
+
+## 🚀 Featured Projects
+
+### 🛡️ 1. Data Sanitization Suite
+Enterprise-grade secure data erasure application for Windows built to permanently destroy data on storage drives in strict compliance with recognized data-destruction standards.
+
+- ⚙️ **Tech Stack**: `C#` `.NET` `WPF` `SQLite` `Win32 API` `Low-Level Disk I/O`
+- 🔒 **Supported Standards**: DoD 5220.22-M, NIST 800-88, Random Pass Overwrite, Zero-Fill, Cryptographic Erase.
+- ⚡ **Highlights**: Multi-drive parallel batch wiping, cryptographically verified erasure (SHA-256 / CRC), exportable audit reports.
+
+---
+
+### 🔍 2. Deepfake Detection Platform
+AI-powered image authenticity verification system analyzing spatial and statistical signals to detect synthetic or manipulated media.
+
+- ⚙️ **Tech Stack**: `Python` `PyTorch` `FastAPI` `OpenCV` `React`
+- 🧠 **Algorithms**: CNN, Vision Transformers (ViT), Face Detection & Alignment, Frequency-Domain Analysis.
+- 📊 **Highlights**: Real-time manipulation heatmaps, batch media processing, high resilience against compression artifacts.
+
+---
+
+### 🏭 3. Furniture Manufacturing ERP
+Comprehensive workflow and operations management platform unifying production tracking, inventory management, and analytics.
+
+- ⚙️ **Tech Stack**: `Next.js` `React` `Node.js` `SQL`
+- 📈 **Highlights**: Multi-station concurrent state synchronization, live production tracking dashboard, real-time inventory alerts.
+
+---
+
+## 📊 Live GitHub Statistics & Activity
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=edixbykv&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&title_color=00F0FF&icon_color=FF007F&text_color=FFFFFF&bg_color=0d1117" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=edixbykv&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&title_color=00F0FF&text_color=FFFFFF&bg_color=0d1117" width="48%" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=edixbykv&theme=tokyonight&hide_border=true&background=0d1117&ring=00F0FF&fire=FF007F" width="97%" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=edixbykv&theme=tokyo-night&hide_border=true&bg_color=0d1117" width="97%" />
+</p>
+
+---
+
+## 🌟 Repository Highlights
+
+| Repository | Description | Primary Stack |
+| :--- | :--- | :--- |
+| 🛡️ **Data Sanitization Suite** | Secure, standards-compliant data erasure for Windows | `C#` `.NET` `WPF` |
+| 🔍 **Deepfake Detection** | AI-based image authenticity and manipulation detection | `Python` `PyTorch` `FastAPI` |
+| 🏭 **Furniture Manufacturing ERP** | Production, inventory, and reporting enterprise platform | `Next.js` `Node.js` `SQL` |
+
+👉 **[View All Repositories on GitHub →](https://github.com/edixbykv?tab=repositories)**
+
+---
+
+## 💡 Development Philosophy
+
+> *"Software should be predictable, verifiable, and easy to reason about. Correctness and performance take priority over convenience, especially in systems handling security or critical user data. Most engineering effort goes into edge-case testing and architecture design — simple, well-tested code beats clever code every time."*
+
+---
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,18,24&height=120&section=footer" width="100%" />
+</p>
