@@ -142,8 +142,8 @@ Comprehensive workflow and operations management platform unifying production tr
 ## 📊 Live GitHub Statistics & Activity
 
 <p align="center">
-  <img src="https://github-readme-stats-anuraghazra.vercel.app/api?username=edixbykv&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&title_color=00F0FF&icon_color=FF007F&text_color=FFFFFF&bg_color=0d1117" width="48%" />
-  <img src="https://github-readme-stats-anuraghazra.vercel.app/api/top-langs/?username=edixbykv&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&title_color=00F0FF&text_color=FFFFFF&bg_color=0d1117" width="48%" />
+  <img src="https://github-readme-stats-fast.vercel.app/api?username=edixbykv&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&title_color=00F0FF&icon_color=FF007F&text_color=FFFFFF&bg_color=0d1117" width="48%" />
+  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=edixbykv&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&title_color=00F0FF&text_color=FFFFFF&bg_color=0d1117" width="48%" />
 </p>
 
 <p align="center">
